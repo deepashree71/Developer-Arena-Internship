@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-image:-webkit-linear-gradient()
+}
+
+body {
+  margin: 50;
+  background: var(--bg);
+  color: var(--text);
+  background-color: aliceblue;
+}
+
+.app {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px;
+  background-color:whitesmoke;
+  
+}
+
+header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+input, select, button {
+  padding: 8px;
+}
+
+.filters button {
+  margin-right: 5px;
+}
+
+.filters .active {
+  font-weight: bold;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  background: var(--card);
+  padding: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.stats {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ 

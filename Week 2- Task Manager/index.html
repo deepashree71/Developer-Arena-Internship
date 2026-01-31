@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="icon" type="images/x-icon" href="tm.webp" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>Task Manager</h1>
+            <button id="themeToggle">🌙</button>
+        </header>
+
+        <form id="taskForm">
+         <input type="text" id="taskInput" placeholder="Enter task..." required />
+         <input type="date" id="dueDate" />
+         <select id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+           <button type="submit">Add</button>
+       </form>
+        <div class="filters">
+           <button data-filter="all" class="active">All</button>
+           <button data-filter="active">Active</button>
+           <button data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <div class="stats">
+            <span id="totalTasks">Total: 15</span>
+            <span id="completedTasks">Completed: 5</span>
+            <span id="activeTasks">Active: 10</span>
+
+            <button id="clearCompleted">Clear Completed</button>
+        </div>
+
+         
+
+          <script src="js/storage.js"></script>
+          <script src="js/utils.js"></script>
+          <script src="js/ui.js"></script>
+          <script src="js/app.js"></script>
+
+    </div>    
+            
+
+</body>
+</html>
